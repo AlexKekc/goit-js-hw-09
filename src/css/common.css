@@ -17,20 +17,73 @@ img {
   max-width: 100%;
 }
 
-button {
+/* Styles for elements of the first Task */
+
+button#start,
+button#stop,
+button#reset {
   -webkit-writing-mode: horizontal-tb !important;
   -webkit-appearance: button;
   border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   border-style: solid;
   border-width: 2px;
-  padding: 20px;
+  padding: 16px;
   text-rendering: auto;
   color: initial;
   display: flex;
   margin: auto;
-  font: 400 16px system-ui;
+  font: 400 14px system-ui;
 }
 
-button:nth-child(4) {
+button#reset {
   margin: 500px auto;
+}
+
+/* Styles for elements of the second Task */
+
+input[type='text'] {
+  padding: 5px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+button[data-start] {
+  padding: 7px 15px;
+  background: #ccc;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.field {
+  display: inline-block;
+}
+
+span.value {
+  margin-right: 5px;
+  text-decoration: underline;
+}
+
+span.label {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+span[data-days] {
+  font-size: 60px;
+}
+
+span[data-hours] {
+  font-size: 50px;
+}
+
+span[data-minutes] {
+  font-size: 40px;
+}
+
+span[data-seconds] {
+  font-size: 30px;
 }

@@ -4,6 +4,7 @@ const refs = {
   stopBtn: document.querySelector('button[data-stop]'),
   resetBtn: document.querySelector('button[data-reset]'),
 };
+
 let timerOfChangeBodyColorId = null;
 
 refs.startBtn.addEventListener('click', changeBodyColor);
@@ -36,6 +37,7 @@ function stopChangingBodyColor() {
 function resetBodyColor() {
   refs.resetBtn.setAttribute('disabled', true);
   refs.startBtn.removeAttribute('disabled');
+  refs.stopBtn.removeAttribute('disabled');
 
   refs.body.style.backgroundColor = '#ffffff';
 
