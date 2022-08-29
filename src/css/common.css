@@ -27,6 +27,7 @@ button#reset {
   border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
   border-style: solid;
   border-width: 2px;
+  border-radius: 5px;
   padding: 16px;
   text-rendering: auto;
   color: initial;
@@ -48,7 +49,7 @@ input[type='text'] {
   border-radius: 5px;
 }
 
-button[data-start] {
+button#start-btn {
   padding: 7px 15px;
   background: #ccc;
   border: 0 none;
