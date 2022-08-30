@@ -33,16 +33,15 @@ function submitingOfCreatePromise(event) {
   stepValue = event.currentTarget.step.value;
   amountValue = event.currentTarget.amount.value;
 
-  createPromise(1, delayValue)
-    .then(({ position, delay }) => {
-      Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
-    })
-    .catch(({ position, delay }) => {
-      Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-    });
+  // createPromise(1, delayValue)
+  //   .then(({ position, delay }) => {
+  //     Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  //   })
+  //   .catch(({ position, delay }) => {
+  //     Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+  //   });
 
-  for (let i = 2; i <= amountValue; i += 1) {
-    delayValue = parseInt(delayValue, 10) + parseInt(stepValue, 10);
+  for (let i = 1; i <= amountValue; i += 1) {
     createPromise(i, delayValue)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -50,6 +49,8 @@ function submitingOfCreatePromise(event) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
+
+    delayValue = parseInt(delayValue, 10) + parseInt(stepValue, 10);
   }
 
   event.currentTarget.reset();
